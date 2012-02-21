@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" version="1.6" method="upgrade">
+    <name>System - Requisession</name>
+    <author>Daniel Blanco</author>
+    <creationDate>February 2012</creationDate>
+    <copyright>Copyright (c) 2012 Daniel Blanco Rojas.</copyright>
+    <license>http://www.opensource.org/licenses/mit-license.php</license>
+    <authorEmail>daniel.blancorojas@gmail.com</authorEmail>
+    <authorUrl>https://github.com/DanielBlanco/joomla-requisession</authorUrl>
+    <version>1.0</version>
+    <description>This plugin checks the session for a variable and if the variable is not set it will redirect to an specified URL.</description>
+
+    <files>
+        <filename plugin="requisession">requisession.php</filename>
+        <filename>requisession/index.html</filename>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB.plg_content_requisession.ini</language>
+        <language tag="es-ES">es-ES.plg_content_requisession.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="default_absolute_path" type="text" size ="80" default="" label="Default Absolute Jumi Path" description="PARAMABSPATH" />
+                <field name="hide_code" type="radio" default="0" label="Hide Jumi code" description="PARAMHIDECODE">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="nested_replace" type="radio" default="0" label="Nested replace" description="PARAMNESTED">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
